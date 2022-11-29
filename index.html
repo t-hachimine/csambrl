@@ -2,7 +2,7 @@
 <html lang="en-us" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
-  <title>CSA-MBRL</title>
+  <title>KRC-MPC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#157878">
   <link rel="stylesheet" href="css/normalize.css">
@@ -17,17 +17,18 @@
 </head>
 <body>
 <section class="page-header">
-  <h1 class="project-name">Cutting-Surface-Aware Model-Based Reinforcement Learning<br>
-    for Shape Manipulation: Application to Robotic Rough Grinding</h1>
-  <h2 class="project-tagline">Takumi Hachimine<sup>1</sup>, Jun Morimoto<sup>2,3</sup>, and Takamitsu Matsubara<sup>1</sup></h2>
+  <h1 class="project-name">Randomized-to-Canonical Model Predictive Control<br>for Real-world Visual Robotic
+    Manipulation</h1>
+  <h2 class="project-tagline">Tomoya Yamanokuchi<sup>1</sup>, Yuhwan Kwon<sup>1</sup>, Yoshihisa Tsurumine<sup>1</sup>,
+    <br>Eiji Uchibe<sup>2</sup>, Jun Morimoto<sup>3,2</sup>, and Takamitsu Matsubara<sup>1</sup></h2>
   <h3 class="project-tagline">1: Nara Institute of Science and Technology (NAIST)<br>
-    2: Kyoto University<br>
-    3: Advanced Telecommunications Research Institute International (ATR)</h3>
-  <h4 class="project-tagline">hogehogehoge</h4>
+    2: Advanced Telecommunications Research Institute International (ATR)<br>
+    3: Kyoto University</h3>
+  <h4 class="project-tagline">Accepted by IEEE RA-L (with IROS 2022 option)</h4>
   <div class="links">
-    <a href="https://google.com" class="btn">arXiv</a>
-    <a href="https://google.com" class="btn">IEEE Xplore</a>
-    <a href="https://google.com" class="btn">YouTube</a>
+    <a href="https://arxiv.org/abs/2207.01840" class="btn">arXiv</a>
+    <a href="https://ieeexplore.ieee.org/document/9817636" class="btn">IEEE Xplore</a>
+    <a href="https://www.youtube.com/watch?v=Arxh7aGluJ0" class="btn">YouTube</a>
   </div>
 </section>
 
@@ -37,32 +38,20 @@
     <a id="user-content-header-1" class="anchor" href="#header-1" aria-hidden="true"><span
             class="octicon octicon-link"></span></a>Abstract</h1>
 
-  <p>
-    Removal processing is a method of shaping an object into the desired shape by removing material, like cutting vegetables with a knife.
-    Shape transitions have a complex relationship with process conditions, such as material properties.
-    Therefore, data collection cannot be executed in simulation and is limited in the real world; data collection costs are high due to its irreversibility.
-    This study proposes a data-efficient model-based reinforcement learning approach for robotic removal shaping operations.
-    The proposed method focuses on the cutting surface in the removal process.
-    It models the removal shape transition by decomposing it into two parts: a geometric shape transition model based on the cutting surface independent of the process conditions and a model compensating for the shape deviation caused by the process condition.
-    With those models, the proposed method achieves
-    <strong>1) efficient learning with a small amount of data</strong> and
-    <strong>2) applicability to different initial and target shapes.</strong>
-    The effectiveness of the proposed method is confirmed by rough grinding operations on a simulator and an actual robot, respectively. 
-  </p>
+  <p>Many works have recently explored Sim-to-real transferable visual model predictive control (MPC).
+    However, such works are limited to one-shot transfer, where real-world data must be collected once to
+    perform the sim-to-real transfer, which remains a significant human effort of transferring the models
+    learned in simulations to new domains in the real world.
+    To alleviate these problems, we first propose a novel model-learning framework called
+    <strong>Kalman Randomized-to-Canonical Model (KRC-model)</strong>. This framework is capable of extracting
+    task-relevant intrinsic features and their dynamics from randomized images. We then propose
+    <strong>Kalman Randomized-to-Canonical Model Predictive Control (KRC-MPC)</strong> as a zero-shot sim-to-real
+    transferable visual MPC using KRC-model. The effectiveness of our method is evaluated through valve rotation
+    tasks by a robot hand in both simulation and the real world, and the block mating tasks in simulation. The
+    experimental results show that KRC-MPC can be applied to various real domains and tasks in a zero-shot
+    manner. </p>
 
 
-  <h1>
-    <a id="header-2" class="anchor" href="#header-2" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Video</h1>
-  <p>The procedure on how </p>
-
-  <div class="youtube_aspect_ratio">
-      <iframe width="854" height="480"
-      src="https://www.youtube.com/embed/kSsGASKV_Js"
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-  </div>
 
   <!-- ****************** Network Architecture ****************** -->
   <h1>
@@ -75,7 +64,6 @@
       <img src="figure/overview_of_mehod.png" alt="Overview" class="overview_img">
     </figure>
   </div>
-
 
 
   <!-- ****************** Network Architecture ****************** -->
