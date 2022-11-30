@@ -1,6 +1,6 @@
 
 /* 動画を囲うdiv */
-.video {
+.youtube_video {
     position: relative;
     width:100%; /* 横幅は100%にしておく */
     height:0; /* 高さは0にしておく(padding-topで高さを指定するため) */
@@ -8,7 +8,7 @@
     }
 
   /* YouTube埋め込み用のiframe */
-.video iframe{
+.youtube_video iframe{
     position: absolute;
     top: 0;
     left: 0;

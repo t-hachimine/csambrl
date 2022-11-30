@@ -397,14 +397,14 @@ a {
 
 
 
-/* ------------------- tomoya-y ----------------------- */
-.overview_img {
-  width : 60%;    /* 横幅を割合で指定 */
+/* ------------------- t-hachi----------------------- */
+.csam_img {
+  width : 100%;    /* 横幅を割合で指定 */
   height: auto;  /* 高さは自動指定 */
 }
 
-.RCAN_img {
-  width: 60%;    /* 横幅を割合で指定 */
+.csambrl_img {
+  width: 80%;    /* 横幅を割合で指定 */
   height: auto;  /* 高さは自動指定 */
 }
 
@@ -415,6 +415,10 @@ a {
 
 .center_man{
   text-align : center;
+}
+
+.right_man{
+  text-align : right;
 }
 
 .cost_function_img {
@@ -454,6 +458,7 @@ ul{
   display: flex;
   justify-content: center;
 }
+
 
 
 
