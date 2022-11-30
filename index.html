@@ -55,7 +55,7 @@
             class="octicon octicon-link"></span></a>Video</h1>
   <p>The procedure on how </p>
 
-  <div class="video">
+  <div class="youtube_video">
         <iframe width="854" height="480"
         src="https://www.youtube.com/embed/kSsGASKV_Js"
         title="YouTube video player" frameborder="0"
@@ -63,30 +63,38 @@
         allowfullscreen></iframe>
 </div>
 
-  <!-- ****************** Network Architecture ****************** -->
-  <h1>
-    <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Overview</h1>
-  <h2>
+
+  <!-- ****************** System over view ****************** -->
+<h1>
+  <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span
+          class="octicon octicon-link"></span></a>Robotic Rough Grinding System</h1>
+<h2>
 
   <div class="center_man">
     <figure>
-      <img src="figure/overview_of_mehod.png" alt="Overview" class="overview_img">
+      <img src="figure/system_overview.png" alt="Overview" class="csam_img">
     </figure>
   </div>
 
 
-  <!-- ****************** Network Architecture ****************** -->
+  <!-- ****************** Proposed method ****************** -->
   <h1>
     <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>RCAN Network Architecture</h1>
+            class="octicon octicon-link"></span></a>Proposed Method</h1>
   <h2>
 
   <div class="center_man">
     <figure>
-      <img src="figure/RCAN_network_architecture.png" alt="net arch." class="RCAN_img">
+      <img src="figure/csam.png" alt="Overview" class="csam_img">
     </figure>
   </div>
+
+  <div class="center_man">
+    <figure>
+      <img src="figure/csa_mbrl.png" alt="net arch." class="csambrl_img">
+    </figure>
+  </div>
+
 
   <!-- ****************** Simulation ****************** -->
   <h1>
@@ -94,311 +102,178 @@
             class="octicon octicon-link"></span></a>Simulation Experiments</h1>
 
   <!-- ====================  Valve Rotation ==================== -->
-  <h2>
+  <!-- <h2>
     <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Valve Rotation Task</h2>
+            class="octicon octicon-link"></span></a>Valve Rotation Task</h2> -->
 
   <h2>
     <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-      class="octicon octicon-link"></span></a> [Success] </h2>
+      class="octicon octicon-link"></span></a> Object A </h2>
 
       <div class="sim_yoko">
-        <figure>
-          <figcaption><h5>KRC w/ z</h5></figcaption>
-          <figure>
-            <div class="tate">
-              <img src="figure/valve_rotation/success/KRC_w_z_success/KRC_w_z_success_domain20.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/valve_rotation/success/KRC_w_z_success/KRC_w_z_success_domain33.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/valve_rotation/success/KRC_w_z_success/KRC_w_z_success_domain10.gif" alt="" style="vertical-align: middle;">
-            </div>
-        </figure>
-        </figure>
-        <figure>
-          <figcaption><h5>KRC w/o z</h5></figcaption>
-          <figure>
-            <div class="tate">
-              <img src="figure/valve_rotation/success/KRC_wo_z_success/KRC_wo_z_success_domain5.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/valve_rotation/success/KRC_wo_z_success/KRC_wo_z_success_domain62.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/valve_rotation/success/KRC_wo_z_success/KRC_wo_z_success_domain27.gif" alt="" style="vertical-align: middle;">
-            </div>
-        </figure>
-        </figure>
-        <figure>
-          <figcaption><h5>KR2 w/ z </h5></figcaption>
-          <figure>
-            <div class="tate">
-              <img src="figure/valve_rotation/success/KR2_w_z_success/KR2_w_z_success_domain29.gif"  alt="" style="vertical-align: middle;">
-              <img src="figure/valve_rotation/success/KR2_w_z_success/KR2_w_z_success_domain8.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/valve_rotation/success/KR2_w_z_success/KR2_w_z_success_domain69.gif" alt="" style="vertical-align: middle;">
-            </div>
-          </figure>
-        </figure>
-        <figure>
-          <figcaption><h5>KR2 w/o z </h5></figcaption>
-          <figure>
-            <div class="tate">
-              <img src="figure/valve_rotation/success/KR2_wo_z_success/KR2_wo_z_success_domain29.gif"   alt="" style="vertical-align: middle;">
-              <img src="figure/valve_rotation/success/KR2_wo_z_success/KR2_wo_z_success_domain93.gif"   alt="" style="vertical-align: middle;">
-              <img src="figure/valve_rotation/success/KR2_wo_z_success/KR2_wo_z_success_domain40.gif"   alt="" style="vertical-align: middle;">
-            </div>
-          </figure>
-        </figure>
-        <figure>
-          <figcaption><h5>KC2 w/ z</h5></figcaption>
-          <figure>
-            <div class="tate">
-              <img src="figure/valve_rotation/success/KC2_w_z_success/KC2_w_z_success_domain94.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/valve_rotation/success/KC2_w_z_success/KC2_w_z_success_domain10.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/No_Success.png" alt="" style="vertical-align: middle;">
-            </div>
-          </figure>
-        </figure>
         <figure>
           <figcaption><h5>Random Policy</h5></figcaption>
           <figure>
             <div class="tate">
-              <img src="figure/No_Success.png" alt="" style="vertical-align: middle;">
-              <img src="figure/No_Success.png" alt="" style="vertical-align: middle;">
-              <img src="figure/No_Success.png" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_random/02_front.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_random/04_isometric.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_random/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+            </div>
+        </figure>
+        </figure>
+        <figure>
+          <figcaption><h5>Geometric Policy</h5></figcaption>
+          <figure>
+            <div class="tate">
+              <img src="figure/simulation/model_a_geom/02_front.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_geom/04_isometric.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_geom/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+            </div>
+        </figure>
+        </figure>
+        <figure>
+          <figcaption><h5>Proposed Policy</h5></figcaption>
+          <figure>
+            <div class="tate">
+              <img src="figure/simulation/model_a_rl/02_front.gif"  alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_rl/04_isometric.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_rl/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+            </div>
+          </figure>
+        </figure>
+        <figure>
+          <figcaption><h5>Oracle Policy</h5></figcaption>
+          <figure>
+            <div class="tate">
+              <img src="figure/simulation/model_a_oracle/02_front.gif"   alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_oracle/04_isometric.gif"   alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_oracle/05_rotation_view.gif"   alt="" style="vertical-align: middle;">
             </div>
           </figure>
         </figure>
       </div>
 
-
-
-
-  <h2>
-    <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-      class="octicon octicon-link"></span></a> [Failure] </h2>
-
-    <div class="sim_yoko">
+    <div class="center_man">
       <figure>
-        <figcaption><h5>KRC w/ z</h5></figcaption>
-        <figure>
-          <div class="tate">
-            <img src="figure/valve_rotation/failure/KRC_w_z_failure/KR2_w_z_failure_domain37.gif" alt="" style="vertical-align: middle;">
-            <img src="figure/No_Failure.png" alt="" style="vertical-align: middle;">
-            <img src="figure/No_Failure.png" alt="" style="vertical-align: middle;">
-          </div>
-      </figure>
-      </figure>
-      <figure>
-        <figcaption><h5>KRC w/o z</h5></figcaption>
-        <figure>
-          <div class="tate">
-            <img src="figure/No_Failure.png" alt="" style="vertical-align: middle;">
-            <img src="figure/No_Failure.png" alt="" style="vertical-align: middle;">
-            <img src="figure/No_Failure.png" alt="" style="vertical-align: middle;">
-          </div>
-      </figure>
-      </figure>
-      <figure>
-        <figcaption><h5>KR2 w/ z </h5></figcaption>
-        <figure>
-          <div class="tate">
-            <img src="figure/valve_rotation/failure/KR2_w_z_failure/KR2_w_z_failure_domain85.gif"  alt="" style="vertical-align: middle;">
-            <img src="figure/valve_rotation/failure/KR2_w_z_failure/KR2_w_z_failure_domain88.gif" alt="" style="vertical-align: middle;">
-            <img src="figure/valve_rotation/failure/KR2_w_z_failure/KR2_w_z_failure_domain4.gif" alt="" style="vertical-align: middle;">
-          </div>
-        </figure>
-      </figure>
-      <figure>
-        <figcaption><h5>KR2 w/o z </h5></figcaption>
-        <figure>
-          <div class="tate">
-            <img src="figure/valve_rotation/failure/KR2_wo_z_failure/KR2_wo_z_failure_domain7.gif"   alt="" style="vertical-align: middle;">
-            <img src="figure/valve_rotation/failure/KR2_wo_z_failure/KR2_wo_z_failure_domain43.gif"   alt="" style="vertical-align: middle;">
-            <img src="figure/valve_rotation/failure/KR2_wo_z_failure/KR2_wo_z_failure_domain71.gif"   alt="" style="vertical-align: middle;">
-          </div>
-        </figure>
-      </figure>
-      <figure>
-        <figcaption><h5>KC2 w/ z</h5></figcaption>
-        <figure>
-          <div class="tate">
-            <img src="figure/valve_rotation/failure/KC2_w_z_failure/KR2_wo_z_failure_domain22.gif" alt="" style="vertical-align: middle;">
-            <img src="figure/valve_rotation/failure/KC2_w_z_failure/KR2_wo_z_failure_domain63.gif" alt="" style="vertical-align: middle;">
-            <img src="figure/valve_rotation/failure/KC2_w_z_failure/KR2_wo_z_failure_domain69.gif" alt="" style="vertical-align: middle;">
-          </div>
-        </figure>
-      </figure>
-      <figure>
-        <figcaption><h5>Random Policy</h5></figcaption>
-        <figure>
-          <div class="tate">
-            <img src="figure/valve_rotation/failure/Random_Policy_failure/KR2_wo_z_failure_domain10.gif" alt="" style="vertical-align: middle;">
-            <img src="figure/valve_rotation/failure/Random_Policy_failure/KR2_wo_z_failure_domain87.gif" alt="" style="vertical-align: middle;">
-            <img src="figure/valve_rotation/failure/Random_Policy_failure/KR2_wo_z_failure_domain96.gif" alt="" style="vertical-align: middle;">
-          </div>
-        </figure>
+        <img src="figure/simulation/sim_model_a_graph.png" alt="net arch." class="csam_img">
       </figure>
     </div>
 
 
-  <!-- ====================  Block Mating ==================== -->
-  <h2>
-    <a id="user-content-header-4" class="anchor" href="#header-4" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Block Mating Task</h2>
-
-  <!-- <div class="yoko">
-    <figure>
-      <figcaption><h5>KRC w/o z (Ours)</h5></figcaption>
-      <img src="videos/sim_block/KRC_without_z/krc_wo_z.gif" alt="">
-    </figure>
-    <figure>
-      <figcaption><h5>KR2 w/o z</h5></figcaption>
-      <img src="videos/sim_block/KR2_without_z/kr2_wo_z.gif" alt="">
-    </figure>
-    <figure>
-      <figcaption><h5>Random Policy</h5></figcaption>
-      <img src="videos/sim_block/Random_Policy/random.gif" alt="">
-    </figure>
-  </div> -->
-
   <h2>
     <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-      class="octicon octicon-link"></span></a> [3 Lower Error Domains] </h2>
+      class="octicon octicon-link"></span></a> Object B </h2>
 
-  <div class="sim_yoko">
-    <figure>
-      <figcaption><h5>KRC w/ z</h5></figcaption>
-      <figure>
-        <div class="tate">
-          <img src="figure/block_mating/lower_cost_top3/KRC_w_z_lower/KRC_w_z_lower1.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/lower_cost_top3/KRC_w_z_lower/KRC_w_z_lower2.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/lower_cost_top3/KRC_w_z_lower/KRC_w_z_lower3.gif" alt="" style="vertical-align: middle;">
-        </div>
-    </figure>
-    </figure>
-    <figure>
-      <figcaption><h5>KRC w/o z</h5></figcaption>
-      <figure>
-        <div class="tate">
-          <img src="figure/block_mating/lower_cost_top3/KRC_wo_z_lower/KRC_wo_z_lower1.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/lower_cost_top3/KRC_wo_z_lower/KRC_wo_z_lower2.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/lower_cost_top3/KRC_wo_z_lower/KRC_wo_z_lower3.gif" alt="" style="vertical-align: middle;">
-        </div>
-    </figure>
-    </figure>
-    <figure>
-      <figcaption><h5>KR2 w/ z </h5></figcaption>
-      <figure>
-        <div class="tate">
-          <img src="figure/block_mating/lower_cost_top3/KR2_w_z_lower/KR2_w_z_lower1.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/lower_cost_top3/KR2_w_z_lower/KR2_w_z_lower2.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/lower_cost_top3/KR2_w_z_lower/KR2_w_z_lower3.gif" alt="" style="vertical-align: middle;">
-        </div>
-      </figure>
-    </figure>
-    <figure>
-      <figcaption><h5>KR2 w/o z </h5></figcaption>
-      <figure>
-        <div class="tate">
-          <img src="figure/block_mating/lower_cost_top3/KR2_wo_z_lower/KR2_wo_z_lower1.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/lower_cost_top3/KR2_wo_z_lower/KR2_wo_z_lower2.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/lower_cost_top3/KR2_wo_z_lower/KR2_wo_z_lower3.gif" alt="" style="vertical-align: middle;">
-        </div>
-      </figure>
-    </figure>
-    <figure>
-      <figcaption><h5>KC2 w/ z</h5></figcaption>
-      <figure>
-        <div class="tate">
-          <img src="figure/block_mating/lower_cost_top3/KC2_w_z_lower/KC2_w_z_lower1.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/lower_cost_top3/KC2_w_z_lower/KC2_w_z_lower2.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/lower_cost_top3/KC2_w_z_lower/KC2_w_z_lower3.gif" alt="" style="vertical-align: middle;">
-        </div>
-      </figure>
-    </figure>
-    <figure>
-      <figcaption><h5>Random Policy</h5></figcaption>
-      <figure>
-        <div class="tate">
-          <img src="figure/block_mating/lower_cost_top3/Random_Policy/Random_Policy_lower1.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/lower_cost_top3/Random_Policy/Random_Policy_lower2.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/lower_cost_top3/Random_Policy/Random_Policy_lower3.gif" alt="" style="vertical-align: middle;">
-        </div>
-      </figure>
-    </figure>
-  </div>
+      <div class="sim_yoko">
+        <figure>
+          <figcaption><h5>Random Policy</h5></figcaption>
+          <figure>
+            <div class="tate">
+              <img src="figure/simulation/model_d_random/02_front.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_random/04_isometric.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_random/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+            </div>
+        </figure>
+        </figure>
+        <figure>
+          <figcaption><h5>Geometric Policy</h5></figcaption>
+          <figure>
+            <div class="tate">
+              <img src="figure/simulation/model_d_geom/02_front.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_geom/04_isometric.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_geom/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+            </div>
+        </figure>
+        </figure>
+        <figure>
+          <figcaption><h5>Proposed Policy</h5></figcaption>
+          <figure>
+            <div class="tate">
+              <img src="figure/simulation/model_d_rl/02_front.gif"  alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_rl/04_isometric.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_rl/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+            </div>
+          </figure>
+        </figure>
+        <figure>
+          <figcaption><h5>Oracle Policy</h5></figcaption>
+          <figure>
+            <div class="tate">
+              <img src="figure/simulation/model_d_oracle/02_front.gif"   alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_oracle/04_isometric.gif"   alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_oracle/05_rotation_view.gif"   alt="" style="vertical-align: middle;">
+            </div>
+          </figure>
+        </figure>
+      </div>
+
+      <div class="center_man">
+        <figure>
+          <img src="figure/simulation/sim_model_d_graph.png" alt="net arch." class="csam_img">
+        </figure>
+      </div>
 
 
-  <!-- -------------------------------  Failure ------------------------------- -->
-  <h2>
-    <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-      class="octicon octicon-link"></span></a> [3 Upper Error Domains] </h2>
 
-  <div class="sim_yoko">
-    <figure>
-      <figcaption><h5>KRC w/ z</h5></figcaption>
-      <figure>
-        <div class="tate">
-          <img src="figure/block_mating/upper_cost_top3/KRC_w_z_upper/KRC_w_z_upper1.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/upper_cost_top3/KRC_w_z_upper/KRC_w_z_upper2.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/upper_cost_top3/KRC_w_z_upper/KRC_w_z_upper3.gif" alt="" style="vertical-align: middle;">
-        </div>
-    </figure>
-    </figure>
-    <figure>
-      <figcaption><h5>KRC w/o z</h5></figcaption>
-      <figure>
-        <div class="tate">
-          <img src="figure/block_mating/upper_cost_top3/KRC_wo_z_upper/KRC_wo_z_upper1.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/upper_cost_top3/KRC_wo_z_upper/KRC_wo_z_upper2.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/upper_cost_top3/KRC_wo_z_upper/KRC_wo_z_upper3.gif" alt="" style="vertical-align: middle;">
-        </div>
-    </figure>
-    </figure>
-    <figure>
-      <figcaption><h5>KR2 w/ z </h5></figcaption>
-      <figure>
-        <div class="tate">
-          <img src="figure/block_mating/upper_cost_top3/KR2_w_z_upper/KR2_w_z_upper1.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/upper_cost_top3/KR2_w_z_upper/KR2_w_z_upper2.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/upper_cost_top3/KR2_w_z_upper/KR2_w_z_upper3.gif" alt="" style="vertical-align: middle;">
-        </div>
-      </figure>
-    </figure>
-    <figure>
-      <figcaption><h5>KR2 w/o z </h5></figcaption>
-      <figure>
-        <div class="tate">
-          <img src="figure/block_mating/upper_cost_top3/KR2_wo_z_upper/KR2_wo_z_upper1.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/upper_cost_top3/KR2_wo_z_upper/KR2_wo_z_upper2.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/upper_cost_top3/KR2_wo_z_upper/KR2_wo_z_upper3.gif" alt="" style="vertical-align: middle;">
-        </div>
-      </figure>
-    </figure>
-    <figure>
-      <figcaption><h5>KC2 w/ z</h5></figcaption>
-      <figure>
-        <div class="tate">
-          <img src="figure/block_mating/upper_cost_top3/KC2_w_z_upper/KC2_w_z_upper1.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/upper_cost_top3/KC2_w_z_upper/KC2_w_z_upper2.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/upper_cost_top3/KC2_w_z_upper/KC2_w_z_upper3.gif" alt="" style="vertical-align: middle;">
-        </div>
-      </figure>
-    </figure>
-    <figure>
-      <figcaption><h5>Random Policy</h5></figcaption>
-      <figure>
-        <div class="tate">
-          <img src="figure/block_mating/upper_cost_top3/Random_Policy/Random_Policy_upper1.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/upper_cost_top3/Random_Policy/Random_Policy_upper2.gif" alt="" style="vertical-align: middle;">
-          <img src="figure/block_mating/upper_cost_top3/Random_Policy/Random_Policy_upper3.gif" alt="" style="vertical-align: middle;">
-        </div>
-      </figure>
-    </figure>
-  </div>
+      <h2>
+        <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
+          class="octicon octicon-link"></span></a> Object C </h2>
+    
+          <div class="sim_yoko">
+            <figure>
+              <figcaption><h5>Random Policy</h5></figcaption>
+              <figure>
+                <div class="tate">
+                  <img src="figure/simulation/model_e_random/02_front.gif" alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_random/04_isometric.gif" alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_random/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+                </div>
+            </figure>
+            </figure>
+            <figure>
+              <figcaption><h5>Geometric Policy</h5></figcaption>
+              <figure>
+                <div class="tate">
+                  <img src="figure/simulation/model_e_geom/02_front.gif" alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_geom/04_isometric.gif" alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_geom/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+                </div>
+            </figure>
+            </figure>
+            <figure>
+              <figcaption><h5>Proposed Policy</h5></figcaption>
+              <figure>
+                <div class="tate">
+                  <img src="figure/simulation/model_e_rl/02_front.gif"  alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_rl/04_isometric.gif" alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_rl/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+                </div>
+              </figure>
+            </figure>
+            <figure>
+              <figcaption><h5>Oracle Policy</h5></figcaption>
+              <figure>
+                <div class="tate">
+                  <img src="figure/simulation/model_e_oracle/02_front.gif"   alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_oracle/04_isometric.gif"   alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_oracle/05_rotation_view.gif"   alt="" style="vertical-align: middle;">
+                </div>
+              </figure>
+            </figure>
+          </div>
 
-
+          <div class="center_man">
+            <figure>
+              <img src="figure/simulation/sim_model_e_graph.png" alt="net arch." class="csam_img">
+            </figure>
+          </div>
 
 
   <!-- ****************** Real-World ****************** -->
-  <h1>
+  <!-- <h1>
     <a id="user-content-header-5" class="anchor" href="#header-5" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Real Experiments (Valve Rotation Task)</h1>
+            class="octicon octicon-link"></span></a>Real Experiments (Valve Rotation Task)</h1> -->
+
   <h2>
     <a id="user-content-header-6" class="anchor" href="#header-6" aria-hidden="true"><span
             class="octicon octicon-link"></span></a>Test Domains</h2>
@@ -422,12 +297,10 @@
 
 
 
-
-
   <!-- ::::::::::::::::::::::::::::::::::::::::::::  [Success] :::::::::::::::::::::::::::::::::::::::::::: -->
-  <h2>
+  <!-- <h2>
     <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>[Success]</h2>
+            class="octicon octicon-link"></span></a>[Success]</h2> -->
 
   <h2>
     <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><spanclass="octicon octicon-link"></span></a>--Domain1--</h2>
@@ -498,118 +371,6 @@
 
 
 
-
-  <!-- ::::::::::::::::::::::::::::::::::::::::::::  [Failure] :::::::::::::::::::::::::::::::::::::::::::: -->
-  <h2>
-    <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>[Failure]</h2>
-
-  <h2>
-    <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><spanclass="octicon octicon-link"></span></a>--Domain1--</h2>
-  <div class="sim_yoko">
-    <figure><figcaption><h5>KRC w/ z     </h5></figcaption><img src="figure/No_Failure.png" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KRC w/o z    </h5></figcaption><img src="figure/No_Failure.png" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/ z     </h5></figcaption><img src="figure/No_Failure.png" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/o z    </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain1/KR2_wo_z_Domain1_out_images_vis_Trial[0]_Result[fail].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KC2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain1/KC2_w_z_Domain1_out_images_vis_Trial[1]_Result[fail].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>Random Policy</h5></figcaption><img src="videos/real_valve/observation/Failure/Domain1/Random_Policy_Domain1_out_images_vis_Trial[0]_Result[fail].gif" alt="" style="vertical-align: middle;"></figure>
-  </div>
-
-  <h2>
-    <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>--Domain2--</h2>
-  <div class="sim_yoko">
-    <figure><figcaption><h5>KRC w/ z     </h5></figcaption><img src="figure/No_Failure.png" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KRC w/o z    </h5></figcaption><img src="figure/No_Failure.png" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain2/KR2_w_z_Domain2_out_images_vis_Trial[0]_Result[fail].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/o z    </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain2/KR2_wo_z_Domain2_out_images_vis_Trial[0]_Result[fail].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KC2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain2/KC2_w_z_Domain2_out_images_vis_Trial[1]_Result[fail].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>Random Policy</h5></figcaption><img src="videos/real_valve/observation/Failure/Domain2/Random_Policy_Domain2_out_images_vis_Trial[1]_Result[fail].gif" alt="" style="vertical-align: middle;"></figure>
-  </div>
-
-  <h2>
-    <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>--Domain3--</h2>
-  <div class="sim_yoko">
-    <figure><figcaption><h5>KRC w/ z     </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain3/KRC_w_z_Domain3_out_images_vis_fail.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KRC w/o z    </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain3/KRC_wo_z_Domain3_out_images_vis_fail.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain3/KR2_w_z_Domain3_out_images_vis_Trial[1]_Result[fail].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/o z    </h5></figcaption><img src="figure/No_Failure.png" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KC2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain3/KC2_w_z_Domain3_out_images_vis_Trial[0]_Result[fail].gif"  alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>Random Policy</h5></figcaption><img src="videos/real_valve/observation/Failure/Domain3/Random_Policy_Domain3_out_images_vis_Trial[0]_Result[fail].gif" alt="" style="vertical-align: middle;"></figure>
-  </div>
-
-  <h2>
-    <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>--Domain4--</h2>
-  <div class="sim_yoko">
-    <figure><figcaption><h5>KRC w/ z     </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain4/KRC_w_z_fail_out_images_vis.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KRC w/o z    </h5></figcaption><img src="figure/No_Failure.png" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain4/KR2_w_z_out_images_vis.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/o z    </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain4/KR2_wo_z_fail_out_images_vis.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KC2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain4/KC2_w_z_out_images_vis_fail.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>Random Policy</h5></figcaption><img src="videos/real_valve/observation/Failure/Domain4/Random_policy_fail_out_images_vis.gif" alt="" style="vertical-align: middle;"></figure>
-  </div>
-
-  <h2>
-    <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>--Domain5--</h2>
-  <div class="sim_yoko">
-    <figure><figcaption><h5>KRC w/ z     </h5></figcaption><img src="figure/No_Failure.png" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KRC w/o z    </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain5/KRC_wo_out_images_vis.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain5/KR2_w_out_images_vis.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/o z    </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain5/KR2_wo_z_out_images_vis.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KC2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain5/KC2_w_z_Domain5_out_images_vis_Trial[0]_Result[fail].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>Random Policy</h5></figcaption><img src="videos/real_valve/observation/Failure/Domain5/Random Policy_Domain5_out_images_vis_Trial[0]_Result[fail].gif" alt="" style="vertical-align: middle;"></figure>
-  </div>
-
-  <h2>
-    <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>--Domain6--</h2>
-  <div class="sim_yoko">
-    <figure><figcaption><h5>KRC w/ z     </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain6/KRC_w_out_images_vis.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KRC w/o z    </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain6/KRC_wo_out_images_vis.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain6/KR2_w_out_images_vis.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/o z    </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain6/KR2_wo_z_out_images_vis_fail.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KC2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Failure/Domain6/KC2_w_Domain6_out_images_vis_Trial[1]_Result[fail].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>Random Policy</h5></figcaption><img src="videos/real_valve/observation/Failure/Domain6/Random_Policy_Domain6_out_images_vis_Trial[1]_Result[fail].gif" alt="" style="vertical-align: middle;"></figure>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- ---------------------- -->
-  <h1>
-    <a id="user-content-header-9" class="anchor" href="#header-9" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Parameters</h1>
-
-  <!-- <h2>
-    <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Parameter List</h2> -->
-  <iframe src="https://drive.google.com/file/d/1WEB1l6OAjzgodUaNTWBCMnqZuJ6PFgNe/preview" width="100%"
-          height="375"
-          allow="autoplay"></iframe>
-
-
-
-  <!-- <h2>
-    <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Cost Function</h2>
-
-  we defined the cost function of MPC as follows:
-  <div class="center_man">
-    <figure>
-      <img src="figure/cost_function.png" alt="cat" class="cost_function_img">
-    </figure>
-  </div>
-  where &beta; means the weight of the variance cost.
-  We tuned &beta; to roughly match the scales of tracking cost and variance cost. -->
-
-
   <!-- ********************  real task ******************** -->
   <h1>
     <a id="user-content-header-9" class="anchor" href="#header-9" aria-hidden="true"><span
@@ -631,7 +392,7 @@
 
 
 
-          <footer class="site-footer">
+  <footer class="site-footer">
     <!--        <span class="site-footer-owner"><a href="https://github.com/jasonlong/cayman-theme">Cayman</a> is maintained by <a href="https://github.com/jasonlong">jasonlong</a>.</span>-->
     <span class="site-footer-credits">This page was generated by <a
             href="https://pages.github.com">GitHub Pages</a>.</span>
