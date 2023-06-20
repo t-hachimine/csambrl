@@ -18,17 +18,16 @@
 </head>
 <body>
 <section class="page-header">
-  <h1 class="project-name">Cutting-Surface-Aware Model-Based Reinforcement Learning<br>
-    for Shape Manipulation: Application to Robotic Rough Grinding</h1>
+  <h1 class="project-name">Learning to Shape by Grinding:<br>Cutting-surface-aware Model-based Reinforcement Learning</h1>
   <h2 class="project-tagline">Takumi Hachimine<sup>1</sup>, Jun Morimoto<sup>2,3</sup>, and Takamitsu Matsubara<sup>1</sup></h2>
   <h3 class="project-tagline">1: Nara Institute of Science and Technology (NAIST)<br>
     2: Kyoto University<br>
-    3: Advanced Telecommunications Research Institute International (ATR)</h3>
-  <h4 class="project-tagline">hogehogehoge</h4>
+    3: Brain Information Communication Research Laboratory Group (BICR), <br> Advanced Telecommunications Research Institute International (ATR)</h3>
+  <!-- <h4 class="project-tagline">--</h4> -->
   <div class="links">
-    <a href="https://google.com" class="btn">arXiv</a>
-    <a href="https://google.com" class="btn">IEEE Xplore</a>
-    <a href="https://google.com" class="btn">YouTube</a>
+    <!-- <a href="https://google.com" class="btn">arXiv</a> -->
+    <!-- <a href="https://google.com" class="btn">IEEE Xplore</a> -->
+    <!-- <a href="https://google.com" class="btn">YouTube</a> -->
   </div>
 </section>
 
@@ -39,25 +38,24 @@
             class="octicon octicon-link"></span></a>Abstract</h1>
 
   <p>
-    Removal processing is a method of shaping an object into the desired shape by removing material, like cutting vegetables with a knife.
-    Shape transitions have a complex relationship with process conditions, such as material properties.
-    Therefore, data collection cannot be executed in simulation and is limited in the real world; data collection costs are high due to its irreversibility.
-    <br>This study proposes a data-efficient model-based reinforcement learning approach for robotic removal shaping operations. 
-    The proposed method focuses on the cutting surface in the removal process.
-    It models the removal shape transition by decomposing it into two parts: geometric shape transition model based on the cutting surface independent of the process conditions and a model compensating for the shape deviation caused by the process condition.
-    With those models, the proposed method achieves <strong> 1)efficient learning with a small amount of data </strong> and <strong> 2)applicability to different initial and target shapes</strong>. 
-    The effectiveness of the proposed method is confirmed by rough grinding operations on a simulator and an actual robot, respectively. 
+    Object shaping by grinding is a crucial industrial process in which a rotating grinding belt removes material.
+    Object-shape transition models are essential to achieving automation by robots; however, learning such a complex model that depends on process conditions is challenging 
+    because it requires a significant amount of data, and the irreversible nature of the removal process makes data collection expensive.
+    <br>This paper proposes a {\it cutting-surface-aware} Model-Based Reinforcement Learning (MBRL) method for robotic grinding.
+    Our method employs a cutting-surface-aware model as the object's shape transition model, which in turn is composed of a geometric cutting model and a cutting-surface-deviation model, based on the assumption that the robot action can specify the cutting surface made by the tool.
+    Furthermore, according to the grinding resistance theory, the cutting-surface-deviation model does not require raw shape information, making the model's dimensions smaller and easier to learn than a naive shape transition model directly mapping the shapes. 
+    Through evaluation and comparison by simulation and real robot experiments, we confirm that our MBRL method can achieve high data efficiency for learning object shaping by grinding and also provide generalization capability for initial and target shapes that differ from the training data.
   </p>
 
 
   <h1>
     <a id="header-2" class="anchor" href="#header-2" aria-hidden="true"><span
             class="octicon octicon-link"></span></a>Video</h1>
-  <p>The procedure on how </p>
+  <!-- <p>The procedure on how </p> -->
 
   <div class="youtube_video">
         <iframe width="854" height="480"
-        src="https://www.youtube.com/embed/kSsGASKV_Js"
+        src="https://www.youtube.com/embed/wydxO_nvzSE"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
@@ -67,12 +65,15 @@
   <!-- ****************** System over view ****************** -->
 <h1>
   <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span
-          class="octicon octicon-link"></span></a>Robotic Rough Grinding System</h1>
+          class="octicon octicon-link"></span></a>Overview</h1>
+          Robotic object shaping by grinding.
+          The robot shapes the object from the initial to the target shape, considering shape deviation by removal resistance.
+          Robot actions are planned as a sequence of the cutting surface.
 <h2>
 
   <div class="center_man">
     <figure>
-      <img src="figure/system_overview.png" alt="Overview" class="csam_img">
+      <img src="figure/system_overview_2.png" alt="Overview" class="csam_img">
     </figure>
   </div>
 
@@ -80,7 +81,7 @@
   <!-- ****************** Proposed method ****************** -->
   <h1>
     <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Proposed Method</h1>
+            class="octicon octicon-link"></span></a>Proposed Shape Transition Model</h1>
   <h2>
 
   <div class="center_man">
@@ -89,6 +90,10 @@
     </figure>
   </div>
 
+  <h1>
+    <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span
+            class="octicon octicon-link"></span></a>Proposed MBRL procedure</h1>
+  <h2>
   <div class="center_man">
     <figure>
       <img src="figure/csa_mbrl.png" alt="net arch." class="csambrl_img">
@@ -112,42 +117,42 @@
 
       <div class="sim_yoko">
         <figure>
-          <figcaption><h5>Random Policy</h5></figcaption>
+          <figcaption><h5>Random</h5></figcaption>
           <figure>
             <div class="tate">
-              <img src="figure/simulation/model_a_random/02_front.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_a_random/04_isometric.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_a_random/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_random/02_a_rand_front.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_random/04_a_rand_isometric.gif" alt="" style="vertical-align: middle;">
+              <!-- <img src="figure/simulation/model_a_random/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
             </div>
         </figure>
         </figure>
         <figure>
-          <figcaption><h5>Geometric Policy</h5></figcaption>
+          <figcaption><h5>Geometric</h5></figcaption>
           <figure>
             <div class="tate">
-              <img src="figure/simulation/model_a_geom/02_front.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_a_geom/04_isometric.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_a_geom/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_geom/02_a_geom_front.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_geom/04_a_geom_isometric.gif" alt="" style="vertical-align: middle;">
+              <!-- <img src="figure/simulation/model_a_geom/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
             </div>
         </figure>
         </figure>
         <figure>
-          <figcaption><h5>Proposed Policy</h5></figcaption>
+          <figcaption><h5>Proposed</h5></figcaption>
           <figure>
             <div class="tate">
-              <img src="figure/simulation/model_a_rl/02_front.gif"  alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_a_rl/04_isometric.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_a_rl/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_rl/02_a_rl_front.gif"  alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_rl/04_a_rl_isometric.gif" alt="" style="vertical-align: middle;">
+              <!-- <img src="figure/simulation/model_a_rl/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
             </div>
           </figure>
         </figure>
         <figure>
-          <figcaption><h5>Oracle Policy</h5></figcaption>
+          <figcaption><h5>Proposed-GT</h5></figcaption>
           <figure>
             <div class="tate">
-              <img src="figure/simulation/model_a_oracle/02_front.gif"   alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_a_oracle/04_isometric.gif"   alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_a_oracle/05_rotation_view.gif"   alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_oracle/02_a_oracle_front.gif"   alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_a_oracle/04_a_oracle_isometric.gif"   alt="" style="vertical-align: middle;">
+              <!-- <img src="figure/simulation/model_a_oracle/05_rotation_view.gif"   alt="" style="vertical-align: middle;"> -->
             </div>
           </figure>
         </figure>
@@ -166,42 +171,42 @@
 
       <div class="sim_yoko">
         <figure>
-          <figcaption><h5>Random Policy</h5></figcaption>
+          <figcaption><h5>Random</h5></figcaption>
           <figure>
             <div class="tate">
-              <img src="figure/simulation/model_d_random/02_front.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_d_random/04_isometric.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_d_random/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_random/02_d_rand_front.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_random/04_d_rand_isometric.gif" alt="" style="vertical-align: middle;">
+              <!-- <img src="figure/simulation/model_d_random/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
             </div>
         </figure>
         </figure>
         <figure>
-          <figcaption><h5>Geometric Policy</h5></figcaption>
+          <figcaption><h5>Geometric</h5></figcaption>
           <figure>
             <div class="tate">
-              <img src="figure/simulation/model_d_geom/02_front.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_d_geom/04_isometric.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_d_geom/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_geom/02_d_geom_front.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_geom/04_d_geom_isometric.gif" alt="" style="vertical-align: middle;">
+              <!-- <img src="figure/simulation/model_d_geom/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
             </div>
         </figure>
         </figure>
         <figure>
-          <figcaption><h5>Proposed Policy</h5></figcaption>
+          <figcaption><h5>Proposed</h5></figcaption>
           <figure>
             <div class="tate">
-              <img src="figure/simulation/model_d_rl/02_front.gif"  alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_d_rl/04_isometric.gif" alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_d_rl/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_rl/02_d_rl_front.gif"  alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_rl/04_d_rl_isometric.gif" alt="" style="vertical-align: middle;">
+              <!-- <img src="figure/simulation/model_d_rl/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
             </div>
           </figure>
         </figure>
         <figure>
-          <figcaption><h5>Oracle Policy</h5></figcaption>
+          <figcaption><h5>Proposed-GT</h5></figcaption>
           <figure>
             <div class="tate">
-              <img src="figure/simulation/model_d_oracle/02_front.gif"   alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_d_oracle/04_isometric.gif"   alt="" style="vertical-align: middle;">
-              <img src="figure/simulation/model_d_oracle/05_rotation_view.gif"   alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_oracle/02_d_oracle_front.gif"   alt="" style="vertical-align: middle;">
+              <img src="figure/simulation/model_d_oracle/04_d_oracle_isometric.gif"   alt="" style="vertical-align: middle;">
+              <!-- <img src="figure/simulation/model_d_oracle/05_rotation_view.gif"   alt="" style="vertical-align: middle;"> -->
             </div>
           </figure>
         </figure>
@@ -221,42 +226,42 @@
     
           <div class="sim_yoko">
             <figure>
-              <figcaption><h5>Random Policy</h5></figcaption>
+              <figcaption><h5>Random</h5></figcaption>
               <figure>
                 <div class="tate">
-                  <img src="figure/simulation/model_e_random/02_front.gif" alt="" style="vertical-align: middle;">
-                  <img src="figure/simulation/model_e_random/04_isometric.gif" alt="" style="vertical-align: middle;">
-                  <img src="figure/simulation/model_e_random/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_random/02_e_rand_front.gif" alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_random/04_e_rand_isometric.gif" alt="" style="vertical-align: middle;">
+                  <!-- <img src="figure/simulation/model_e_random/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
                 </div>
             </figure>
             </figure>
             <figure>
-              <figcaption><h5>Geometric Policy</h5></figcaption>
+              <figcaption><h5>Geometric</h5></figcaption>
               <figure>
                 <div class="tate">
-                  <img src="figure/simulation/model_e_geom/02_front.gif" alt="" style="vertical-align: middle;">
-                  <img src="figure/simulation/model_e_geom/04_isometric.gif" alt="" style="vertical-align: middle;">
-                  <img src="figure/simulation/model_e_geom/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_geom/02_e_geom_front.gif" alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_geom/04_e_geom_isometric.gif" alt="" style="vertical-align: middle;">
+                  <!-- <img src="figure/simulation/model_e_geom/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
                 </div>
             </figure>
             </figure>
             <figure>
-              <figcaption><h5>Proposed Policy</h5></figcaption>
+              <figcaption><h5>Proposed</h5></figcaption>
               <figure>
                 <div class="tate">
-                  <img src="figure/simulation/model_e_rl/02_front.gif"  alt="" style="vertical-align: middle;">
-                  <img src="figure/simulation/model_e_rl/04_isometric.gif" alt="" style="vertical-align: middle;">
-                  <img src="figure/simulation/model_e_rl/05_rotation_view.gif" alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_rl/02_e_rl_front.gif"  alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_rl/04_e_rl_isometric.gif" alt="" style="vertical-align: middle;">
+                  <!-- <img src="figure/simulation/model_e_rl/05_rotation_view.gif" alt="" style="vertical-align: middle;"> -->
                 </div>
               </figure>
             </figure>
             <figure>
-              <figcaption><h5>Oracle Policy</h5></figcaption>
+              <figcaption><h5>Proposed-GT</h5></figcaption>
               <figure>
                 <div class="tate">
-                  <img src="figure/simulation/model_e_oracle/02_front.gif"   alt="" style="vertical-align: middle;">
-                  <img src="figure/simulation/model_e_oracle/04_isometric.gif"   alt="" style="vertical-align: middle;">
-                  <img src="figure/simulation/model_e_oracle/05_rotation_view.gif"   alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_oracle/02_e_oracle_front.gif"   alt="" style="vertical-align: middle;">
+                  <img src="figure/simulation/model_e_oracle/04_e_oracle_isometric.gif" alt="" style="vertical-align: middle;">
+                  <!-- <img src="figure/simulation/model_e_oracle/05_rotation_view.gif"   alt="" style="vertical-align: middle;"> -->
                 </div>
               </figure>
             </figure>
@@ -268,129 +273,14 @@
             </figure>
           </div>
 
-
-  <!-- ****************** Real-World ****************** -->
-  <!-- <h1>
-    <a id="user-content-header-5" class="anchor" href="#header-5" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Real Experiments (Valve Rotation Task)</h1> -->
-
-  <h2>
-    <a id="user-content-header-6" class="anchor" href="#header-6" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Test Domains</h2>
-
-  <div class="real_yoko2">
-    <img src="videos/real_valve/test_domains/0.gif"
-         alt="">
-    <img src="videos/real_valve/test_domains/1.gif"
-         alt="">
-    <img src="videos/real_valve/test_domains/2.gif"
-         alt="">
-  </div>
-  <div class="real_yoko2">
-    <img src="videos/real_valve/test_domains/3.gif"
-         alt="">
-    <img src="videos/real_valve/test_domains/4.gif"
-         alt="">
-    <img src="videos/real_valve/test_domains/5.gif"
-         alt="">
-  </div>
-
-
-
-  <!-- ::::::::::::::::::::::::::::::::::::::::::::  [Success] :::::::::::::::::::::::::::::::::::::::::::: -->
-  <!-- <h2>
-    <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>[Success]</h2> -->
-
-  <h2>
-    <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><spanclass="octicon octicon-link"></span></a>--Domain1--</h2>
-  <div class="sim_yoko">
-    <figure><figcaption><h5>KRC w/ z     </h5></figcaption><img src="videos/real_valve/observation/Success/Domain1/KRC_w_z_Domain1_out_images_vis_Trial[0]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KRC w/o z    </h5></figcaption><img src="videos/real_valve/observation/Success/Domain1/KRC_wo_z_Domain1_out_images_vis_Trial[0]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Success/Domain1/KR2_w_z_Domain1_out_images_vis_Trial[0]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/o z    </h5></figcaption><img src="videos/real_valve/observation/Success/Domain1/KR2_wo_z_Domain1_out_images_vis_Trial[0]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KC2 w/ z     </h5></figcaption><img src="figure/No_Success.png" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>Random Policy</h5></figcaption><img src="figure/No_Success.png" alt="" style="vertical-align: middle;"></figure>
-  </div>
-
-  <h2>
-    <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>--Domain2--</h2>
-  <div class="sim_yoko">
-    <figure><figcaption><h5>KRC w/ z     </h5></figcaption><img src="videos/real_valve/observation/Success/Domain2/KRC_w_z_Domain2_out_images_vis_Trial[0]_Result[sucess].gif"  alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KRC w/o z    </h5></figcaption><img src="videos/real_valve/observation/Success/Domain2/KRC_wo_z_Domain2_out_images_vis_Trial[0]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Success/Domain2/KR2_w_z_Domain2_out_images_vis_Trial[0]_Result[sucess].gif"  alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/o z    </h5></figcaption><img src="videos/real_valve/observation/Success/Domain2/KR2_wo_z_Domain2_out_images_vis_Trial[0]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KC2 w/ z     </h5></figcaption><img src="figure/No_Success.png" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>Random Policy</h5></figcaption><img src="figure/No_Success.png" alt="" style="vertical-align: middle;"></figure>
-  </div>
-
-  <h2>
-    <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>--Domain3--</h2>
-  <div class="sim_yoko">
-    <figure><figcaption><h5>KRC w/ z     </h5></figcaption><img src="videos/real_valve/observation/Success/Domain3/KRC_w_z_Domain3_out_images_vis_Trial[0]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KRC w/o z    </h5></figcaption><img src="videos/real_valve/observation/Success/Domain3/KRC_wo_z_Domain3_out_images_vis_Trial[1]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Success/Domain3/KR2_w_z_Domain3_out_images_vis_Trial[1]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/o z    </h5></figcaption><img src="videos/real_valve/observation/Success/Domain3/KR2_wo_z_Domain3_out_images_vis_Trial[1]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KC2 w/ z     </h5></figcaption><img src="figure/No_Success.png" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>Random Policy</h5></figcaption><img src="figure/No_Success.png" alt="" style="vertical-align: middle;"></figure>
-  </div>
-
-  <h2>
-    <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>--Domain4--</h2>
-  <div class="sim_yoko">
-    <figure><figcaption><h5>KRC w/ z     </h5></figcaption><img src="videos/real_valve/observation/Success/Domain4/KRC_w_z_out_images_vis.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KRC w/o z    </h5></figcaption><img src="videos/real_valve/observation/Success/Domain4/KRC_wo_z_out_images_vis.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Success/Domain4/KR2_w_z_out_images_vis.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/o z    </h5></figcaption><img src="videos/real_valve/observation/Success/Domain4/KR2_wo_z_out_images_vis_success.gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KC2 w/ z     </h5></figcaption><img src="figure/No_Success.png" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>Random Policy</h5></figcaption><img src="figure/No_Success.png" alt="" style="vertical-align: middle;"></figure>
-  </div>
-
-  <h2>
-    <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>--Domain5--</h2>
-  <div class="sim_yoko">
-    <figure><figcaption><h5>KRC w/ z     </h5></figcaption><img src="videos/real_valve/observation/Success/Domain5/KRC_w_z_Domain5_out_images_vis_Trial[0]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KRC w/o z    </h5></figcaption><img src="videos/real_valve/observation/Success/Domain5/KRC_wo_z_Domain5_out_images_vis_Trial[1]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Success/Domain5/KR2_w_z_Domain5_out_images_vis_Trial[0]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/o z    </h5></figcaption><img src="videos/real_valve/observation/Success/Domain5/KR2_wo_z_Domain5_out_images_vis_Trial[0]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KC2 w/ z     </h5></figcaption><img src="figure/No_Success.png" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>Random Policy</h5></figcaption><img src="figure/No_Success.png" alt="" style="vertical-align: middle;"></figure>
-  </div>
-
-  <h2>
-    <a id="user-content-header-7" class="anchor" href="#header-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>--Domain6--</h2>
-  <div class="sim_yoko">
-    <figure><figcaption><h5>KRC w/ z     </h5></figcaption><img src="videos/real_valve/observation/Success/Domain6/KRC_w_z_Domain6_out_images_vis_Trial[1]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KRC w/o z    </h5></figcaption><img src="videos/real_valve/observation/Success/Domain6/KRC_wo_z_Domain6_out_images_vis_Trial[1]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/ z     </h5></figcaption><img src="videos/real_valve/observation/Success/Domain6/KR2_w_z_Domain6_out_images_vis_Trial[0]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KR2 w/o z    </h5></figcaption><img src="videos/real_valve/observation/Success/Domain6/KR2_wo_z_Domain6_out_images_vis_Trial[1]_Result[sucess].gif" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>KC2 w/ z     </h5></figcaption><img src="figure/No_Success.png" alt="" style="vertical-align: middle;"></figure>
-    <figure><figcaption><h5>Random Policy</h5></figcaption><img src="figure/No_Success.png" alt="" style="vertical-align: middle;"></figure>
-  </div>
-
-
-
-
-  <!-- ********************  real task ******************** -->
   <h1>
-    <a id="user-content-header-9" class="anchor" href="#header-9" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Additional Tasks (Valve Rotation)</h1>
-  <h2>
-    <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span
-            class="octicon octicon-link"></span></a>Supplementary Material</h2>
-  We show the figure about the evaluation result of control performance in additional tasks in the real world.
-  This figure corresponds to the result of TABLE V in the paper.
-  This figure shows that target and actual valve trajectory during execution in additional tasks of KRC w/ z and KC2 w/ z.
-  The means and confidence intervals for the three results with the lowest values of Eq. (17) among the five models are shown to eliminate the outlier values for failure cases.
-  From this figure, we can see that KRC w/ z indeed can track each target valve trajectory much better than KC2 w/ z.
-
+    <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span
+            class="octicon octicon-link"></span></a>Parameters</h1>
   <div class="center_man">
     <figure>
-      <img src="figure/task_ablation.png" alt="cat" class="task_ablation_img">
+      <img src="figure/hyper_param.png" alt="cat" class="task_ablation_img">
     </figure>
   </div>
-
-
 
   <footer class="site-footer">
     <!--        <span class="site-footer-owner"><a href="https://github.com/jasonlong/cayman-theme">Cayman</a> is maintained by <a href="https://github.com/jasonlong">jasonlong</a>.</span>-->
