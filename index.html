@@ -41,7 +41,7 @@
     Object shaping by grinding is a crucial industrial process in which a rotating grinding belt removes material.
     Object-shape transition models are essential to achieving automation by robots; however, learning such a complex model that depends on process conditions is challenging 
     because it requires a significant amount of data, and the irreversible nature of the removal process makes data collection expensive.
-    <br>This paper proposes a {\it cutting-surface-aware} Model-Based Reinforcement Learning (MBRL) method for robotic grinding.
+    <br>This paper proposes a cutting-surface-aware Model-Based Reinforcement Learning (MBRL) method for robotic grinding.
     Our method employs a cutting-surface-aware model as the object's shape transition model, which in turn is composed of a geometric cutting model and a cutting-surface-deviation model, based on the assumption that the robot action can specify the cutting surface made by the tool.
     Furthermore, according to the grinding resistance theory, the cutting-surface-deviation model does not require raw shape information, making the model's dimensions smaller and easier to learn than a naive shape transition model directly mapping the shapes. 
     Through evaluation and comparison by simulation and real robot experiments, we confirm that our MBRL method can achieve high data efficiency for learning object shaping by grinding and also provide generalization capability for initial and target shapes that differ from the training data.
