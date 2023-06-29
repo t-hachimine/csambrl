@@ -1,3 +1,3 @@
-# Randomized-to-Canonical Model Predictive Control for Real-world Visual Robotic Manipulation
-dsfds
+# Learning to Shape by Grinding:<br>Cutting-surface-aware Model-based Reinforcement Learning
 - Our project page: https://t-hachimine.github.io/csambrl/
+- Video link:https://youtu.be/wydxO_nvzSE
